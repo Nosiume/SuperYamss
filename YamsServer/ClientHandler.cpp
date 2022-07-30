@@ -2,24 +2,23 @@
 
 void ClientHandler::run()
 {
-	while (running)
+	while (m_running)
 	{
 		//Client packet handler
 		sf::Packet packet;
-		if (sock->receive(packet) != sf::Socket::Done)
+		if (m_sock->receive(packet) != sf::Socket::Done)
 			continue;
 	}
 }
 
-ClientHandler::ClientHandler(sf::TcpSocket* _sock)
+ClientHandler::ClientHandler(sf::TcpSocket* sock, Server* server) :
+	m_sock(sock), m_server(server)
 {
-	sock = _sock;
-	//server = _server;
-	handler = std::thread([this] {this->run(); });
+	m_handler = std::thread([this] {this->run(); });
 }
 
 ClientHandler::~ClientHandler()
 {
-	handler.join();
-	delete sock;
+	m_handler.join();
+	delete m_sock;
 }

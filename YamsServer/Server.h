@@ -1,9 +1,9 @@
 #pragma once
 
 #include <SFML/Network.hpp>
-#include "ClientHandler.h"
 #include <vector>
 
+class ClientHandler;
 
 class Server 
 {
@@ -19,4 +19,5 @@ public:
 	void parsePacket(sf::Packet& packet, ClientHandler& source);
 
 	void run();
+
 };

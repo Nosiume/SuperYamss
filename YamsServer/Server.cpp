@@ -49,6 +49,6 @@ void Server::run()
 		}
 		std::cout << "[+] Client connection received from " << client.getRemoteAddress() << std::endl;
 		std::cout << "[+] Creating client handler on this socket" << std::endl;
-		handlers.push_back(ClientHandler(&client));
+		handlers.push_back(ClientHandler(&client, this));
 	}
 }
