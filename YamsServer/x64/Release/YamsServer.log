@@ -1,0 +1,6 @@
+﻿  Server.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 29 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  YamsServer.vcxproj -> C:\Users\louis\OneDrive\Documents\Code\vsrepos\Yams\x64\Release\YamsServer.exe

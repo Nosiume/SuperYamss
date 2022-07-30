@@ -1,0 +1,4 @@
+#Git ignore for Yams game server
+SFML-2.5.1/
+build/
+.vs/
