@@ -25,5 +25,5 @@ public:
 	void PushState(GameState* state);
 	void PopState();
 
-	sf::Font GetFont() { return font; }
+	sf::Font* GetFont() { return &font; }
 };

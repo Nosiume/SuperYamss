@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Game.h"
+#include "Button.h"
 
 class GameState
 {
@@ -12,8 +13,8 @@ public:
 	virtual void Resume() = 0;
 
 	virtual void HandleEvents(Game* game) = 0;
-	virtual void Update(Game* game) = 0;
-	virtual void Render(Game* game, sf::RenderWindow*) = 0;
+	virtual void Update(Game* game, sf::RenderWindow* window) = 0;
+	virtual void Render(Game* game, sf::RenderWindow* window) = 0;
 
 	void ChangeState(Game* game, GameState* state)
 	{
@@ -29,6 +30,7 @@ class MenuState : public GameState
 {
 private:
 	sf::Text title;
+	Button button;
 
 public:
 	void Init(Game*);
@@ -38,7 +40,7 @@ public:
 	void Resume() {}; //Same here
 
 	void HandleEvents(Game*) {} // Nothing to see here
-	void Update(Game*);
+	void Update(Game*, sf::RenderWindow*);
 	void Render(Game*, sf::RenderWindow*);
 
 	static MenuState* Instance()

@@ -3,7 +3,10 @@
 
 void Game::run()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Super Yamssss");
+    window.setVerticalSyncEnabled(true); // Since nowadays you can see 360hz monitor
+    window.setKeyRepeatEnabled(false);
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -16,7 +19,7 @@ void Game::run()
         window.clear(sf::Color(54, 108, 194, 255));
         
         //Render
-        states.back()->Update(this);
+        states.back()->Update(this, &window);
         states.back()->Render(this, &window);
 
         window.display();
