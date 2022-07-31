@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "Game.h"
-#include "GameState.h"
+#include "MenuState.h"
 
 int main()
 {

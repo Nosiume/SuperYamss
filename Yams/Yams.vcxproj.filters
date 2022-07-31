@@ -19,6 +19,12 @@
     <Filter Include="Source Files\UI">
       <UniqueIdentifier>{856f9137-9188-4607-a3ab-0c0c6d5e0c53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{5f5028b6-5b73-4ee4-9c2b-c50eb3efb2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\States">
+      <UniqueIdentifier>{b19cdbee-bac7-4d5e-b2c7-ddc744bcdf5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp">
@@ -33,6 +39,12 @@
     <ClCompile Include="Button.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -43,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>Header Files\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
