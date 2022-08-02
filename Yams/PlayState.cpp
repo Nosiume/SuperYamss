@@ -12,15 +12,19 @@ void PlayState::Init(Game* game)
         game->PopState();
     });
     button.Move(sf::Vector2f(50, 425));
+
+    slider = RangeSlider(sf::Vector2f(200, 200));
 }
 
 void PlayState::Update(Game* game, sf::RenderWindow* window)
 {
     button.Update(sf::Mouse::getPosition() - window->getPosition() - sf::Vector2i(0, 31));
+    slider.Update();
 }
 
 void PlayState::Render(Game* game, sf::RenderWindow* window)
 {
     window->draw(text);
     button.Render(window);
+    slider.Render(window);
 }

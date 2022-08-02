@@ -14,16 +14,25 @@ void MenuState::Init(Game* game)
         game->PushState(PlayState::Instance());
     });
     playButton.Move(sf::Vector2f(225, 250));
+
+    settingsButton = Button(sf::Text("Settings", *(game->GetFont()), 28), sf::Vector2f(350, 50), sf::Color(124, 194, 196), sf::Color(87, 227, 195), sf::Color(164, 202, 197), [game] {
+        game->PushState(PlayState::Instance());
+    });
+    settingsButton.Move(sf::Vector2f(225, 325));
 }
 
 void MenuState::Update(Game* game, sf::RenderWindow* window)
 {
     //We need to fix position to local coordinates of window - 31 to remove window "bar" height
     playButton.Update(sf::Mouse::getPosition() - window->getPosition() - sf::Vector2i(0, 31));
+    settingsButton.Update(sf::Mouse::getPosition() - window->getPosition() - sf::Vector2i(0, 31));
 }
 
 void MenuState::Render(Game* game, sf::RenderWindow* window)
 {
     window->draw(title);
+
+    //Menu buttons
     playButton.Render(window);
+    settingsButton.Render(window);
 }

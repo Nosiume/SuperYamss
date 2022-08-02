@@ -25,6 +25,9 @@
     <Filter Include="Header Files\States">
       <UniqueIdentifier>{b19cdbee-bac7-4d5e-b2c7-ddc744bcdf5b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{446f15b4-b30a-44fc-92bc-13ea7d60c7f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="PlayState.cpp">
       <Filter>Source Files\States</Filter>
     </ClCompile>
+    <ClCompile Include="RangeSlider.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -61,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="PlayState.h">
       <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="RangeSlider.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\Misc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

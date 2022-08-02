@@ -20,7 +20,7 @@ public:
 		game->ChangeState(state);
 	}
 
-protected:
+public:
 	GameState() {}
 };
 

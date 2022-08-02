@@ -8,6 +8,7 @@ class MenuState : public GameState
 private:
 	sf::Text title;
 	Button playButton;
+	Button settingsButton;
 
 public:
 	void Init(Game*);

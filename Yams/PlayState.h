@@ -2,12 +2,15 @@
 
 #include "GameState.h"
 #include "Button.h"
+#include "RangeSlider.h"
 
 class PlayState : public GameState
 {
 private:
 	sf::Text text;
 	Button button;
+
+	RangeSlider slider;
 
 public:
 	void Init(Game*);
